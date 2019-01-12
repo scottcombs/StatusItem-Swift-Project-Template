@@ -1,0 +1,26 @@
+/*********** APP TO DOs ***************/
+
+1) Do LAUNCHER TO DOs
+2) Turn off Sandboxing
+3) Turn off Code Signing
+4) Add Copy Files Macro in Build Phases
+	a) Create Copy Files Phase
+	b) Set Destination to Wrapper
+	c) Set Subpath to Contents/Library/LoginItems
+	d) Add [Main App Name]Launcher.app to be copied
+5) Add Bundle Identifier for the Launcher App in Main App/ViewController/loadAtStartup function
+	a) Replace [--Bundle Identifier For Launcher App--]
+6) Add to Linked Frameworks and Libraries
+	a) ServiceManagement.framework
+7) You can remove this ToDos.txt and the folder Launcher
+
+/*********** LAUNCHER TO DOs ***************/
+
+1) Create a new App Target called [Main App Name]Launcher
+2) Edit the Target Scheme for the Main to compile the [Main App Name]Launcher before the Main App.
+3) Delete AppDelegate and ViewController from [Main App Name]Launcher project
+	a) Move to Trash
+4) Move Launcher/AppDelegate into [Main App Name]Launcher project
+5) Turn off Sandboxing
+6) Turn off Code Signing
+7) Copy the App Bundle Identifier for Step 5 in App TO DOs
